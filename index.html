@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Join Our Discord Server!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --discord-blurple: #5865F2;
+      --discord-dark: #23272a;
+      --discord-light: #99aab5;
+      --bluters-accent: #2e51a2;
+      --oatmeal-accent: #b98c2a;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(ellipse at top left, var(--discord-blurple) 0%, var(--discord-dark) 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      animation: backgroundPulse 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes backgroundPulse {
+      0% { background: radial-gradient(ellipse at top left, var(--discord-blurple) 0%, var(--discord-dark) 100%);}
+      100% { background: radial-gradient(ellipse at bottom right, var(--discord-blurple) 30%, var(--discord-dark) 100%);}
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .center-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      background: rgba(44, 47, 51, 0.84);
+      padding: 40px 50px;
+      border-radius: 32px;
+      box-shadow: 0 10px 40px 0 #181c218f;
+      animation: fadeInUp 1.2s cubic-bezier(.36,.07,.19,.97) both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .discord-img-logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 32px;
+      box-shadow: 0 4px 32px 0 #5865f259;
+      object-fit: cover;
+      animation: logoPop 1.5s cubic-bezier(.68,-0.55,.27,1.55) both;
+      background: #23272a;
+      user-select: none;
+    }
+
+    @keyframes logoPop {
+      0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-30deg);
+      }
+      60% {
+        opacity: 1;
+        transform: scale(1.15) rotate(5deg);
+      }
+      80% {
+        transform: scale(0.98) rotate(-2deg);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+    }
+
+    .invite-link {
+      color: var(--discord-blurple);
+      font-size: 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      background: #fff;
+      padding: 18px 40px;
+      border-radius: 30px;
+      box-shadow: 0 2px 24px 0 #5865f288;
+      transition: 
+        color 0.22s cubic-bezier(.4,0,.2,1),
+        background 0.22s cubic-bezier(.4,0,.2,1),
+        transform 0.14s cubic-bezier(.4,0,.2,1),
+        box-shadow 0.14s cubic-bezier(.4,0,.2,1);
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      animation: pulseLink 2.4s infinite alternate cubic-bezier(.4,0,.2,1);
+    }
+
+    @keyframes pulseLink {
+      0% { box-shadow: 0 2px 24px 0 #5865f288; transform: scale(1);}
+      100% { box-shadow: 0 4px 32px 0 #5865f2c2; transform: scale(1.05);}
+    }
+
+    .invite-link:hover, .invite-link:focus {
+      color: #fff;
+      background: var(--discord-blurple);
+      box-shadow: 0 6px 36px 0 #5865f2dd;
+      transform: scale(1.08) translateY(-2px);
+      text-shadow: 0 2px 12px #23272a66;
+      outline: none;
+    }
+
+    .invite-link:active {
+      transform: scale(0.98);
+      box-shadow: 0 2px 16px 0 #5865f288;
+    }
+
+    .discord-heading {
+      color: #fff;
+      font-size: 2.1rem;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 10px 0;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 8px #23272a33;
+      animation: fadeInUp 1.6s 0.2s both;
+    }
+
+    .discord-desc {
+      color: var(--discord-light);
+      font-size: 1.1rem;
+      margin: 0 0 8px 0;
+      text-align: center;
+      max-width: 420px;
+      animation: fadeInUp 1.9s 0.4s both;
+    }
+
+    /* Bluters Block */
+    .bluters-block-container {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      gap: 0;
+      width: 100%;
+      max-width: 580px;
+      min-height: 160px;
+      background: rgba(34, 44, 79, 0.80);
+      border-radius: 28px;
+      box-shadow: 0 6px 32px 0 #2e51a266;
+      overflow: hidden;
+      animation: fadeInUp 1.5s 0.5s both;
+    }
+
+    .bluters-side {
+      background: linear-gradient(135deg, #2e51a2 80%, #4e77dd 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 28px 18px 18px 18px;
+      min-width: 120px;
+      max-width: 140px;
+      justify-content: flex-start;
+      gap: 12px;
+      border-top-left-radius: 28px;
+      border-bottom-left-radius: 28px;
+    }
+
+    .bluters-profile-img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 16px #1e2b4a66;
+      animation: blutersPop 1.2s cubic-bezier(.68,-0.55,.27,1.55) both;
+    }
+
+    @keyframes blutersPop {
+      0% { opacity: 0; transform: scale(0.6) rotate(-12deg);}
+      70% { opacity: 1; transform: scale(1.1) rotate(6deg);}
+      100% { opacity: 1; transform: scale(1) rotate(0);}
+    }
+
+    .bluters-title {
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-align: center;
+      text-shadow: 0 2px 10px #23272a55;
+      margin: 0;
+      margin-bottom: 0.3em;
+      user-select: none;
+    }
+
+    .bluters-content {
+      flex: 1 1 0;
+      padding: 32px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .bluters-desc {
+      color: #d2e6ff;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      font-weight: 500;
+      text-shadow: 0 2px 8px #23272a38;
+      margin: 0;
+      word-break: break-word;
+      letter-spacing: 0.01em;
+    }
+
+    /* Oatmeal Block */
+    .oatmeal-block-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 580px;
+      min-height: 120px;
+      background: rgba(185, 140, 42, 0.16);
+      border-radius: 28px;
+      box-shadow: 0 4px 28px 0 #b98c2a55;
+      overflow: hidden;
+      margin-top: 0;
+      animation: fadeInUp 1.5s 0.8s both;
+      position: relative;
+      z-index: 1;
+    }
+
+    .oatmeal-profile-img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff3e0;
+      margin-top: 28px;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 16px #b98c2a66;
+      animation: oatmealPop 1.2s cubic-bezier(.68,-0.55,.27,1.55) both;
+      background: #fff8e1;
+    }
+
+    @keyframes oatmealPop {
+      0% { opacity: 0; transform: scale(0.6) rotate(15deg);}
+      70% { opacity: 1; transform: scale(1.08) rotate(-8deg);}
+      100% { opacity: 1; transform: scale(1) rotate(0);}
+    }
+
+    .oatmeal-title {
+      color: #f8e6c1;
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-align: center;
+      text-shadow: 0 2px 10px #b98c2a99, 0 1px 2px #23272a44;
+      margin: 0 0 32px 0;
+      user-select: none;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    @media (max-width: 750px) {
+      .center-content, .bluters-block-container, .oatmeal-block-container {
+        padding: 30px 8vw;
+      }
+      .bluters-block-container {
+        flex-direction: column;
+        min-width: 0;
+        max-width: 98vw;
+      }
+      .bluters-side {
+        flex-direction: row;
+        min-width: unset;
+        max-width: unset;
+        border-radius: 28px 28px 0 0;
+        padding: 18px 18px 10px 18px;
+        justify-content: center;
+      }
+      .bluters-content {
+        padding: 20px 8vw;
+        justify-content: center;
+      }
+      .oatmeal-block-container {
+        min-width: 0;
+        max-width: 98vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-content">
+    <!-- Discord Block -->
+    <div class="center-content">
+      <img class="discord-img-logo" src="https://i.postimg.cc/k4DD0dBf/aaz90x6gs.webp" alt="Discord Logo">
+      <div>
+        <div class="discord-heading">Welcome to Our Discord Server!</div>
+        <div class="discord-desc">
+          Join our awesome community to chat, share, and connect.<br>
+          Click the button below to get your instant invite!
+        </div>
+      </div>
+      <a class="invite-link" href="https://discord.gg/3tvaWeFsz3" target="_blank" rel="noopener">
+        Join Discord
+      </a>
+    </div>
+
+    <!-- Bluters Block -->
+    <div class="bluters-block-container">
+      <div class="bluters-side">
+        <img class="bluters-profile-img" src="https://i.postimg.cc/P5wW79CW/channels4-profile.jpg" alt="Bluters Profile">
+        <div class="bluters-title">Bluters</div>
+      </div>
+      <div class="bluters-content">
+        <div class="bluters-desc">
+          Welcome to the Bluters section!<br>
+          Here you can showcase your team, group, or anything else you want. Customize this text as needed!
+        </div>
+      </div>
+    </div>
+
+    <!-- Oatmeal Block -->
+    <div class="oatmeal-block-container">
+      <img class="oatmeal-profile-img" src="https://i.postimg.cc/15fF228W/oatmeal-non-profile-picture.png" alt="Oatmeal Image">
+      <div class="oatmeal-title">Oatmeal</div>
+    </div>
+  </div>
+</body>
+</html>
